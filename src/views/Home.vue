@@ -37,7 +37,7 @@ import Loading from '@/components/Loading.vue'; // @ is an alias to /src
 })
 export default class Home extends Vue {
   public loading: boolean = true;
-  public sounds: { name: string, src: NodeRequire, play: boolean, audio: HTMLAudioElement | undefined }[] = [
+  public sounds: Array<{ name: string, src: NodeRequire, play: boolean, audio: HTMLAudioElement | undefined }> = [
     { name: 'Ok', src: require('./../sounds/ok1.mp3'), play: false, audio: undefined },
     { name: 'Ok (expiration)', src: require('./../sounds/ok2.mp3'), play: false, audio: undefined },
     { name: 'Homme intégrallement nue', src: require('./../sounds/homme-integralement-nue.mp3'), play: false, audio: undefined },
@@ -56,14 +56,14 @@ export default class Home extends Vue {
     { name: 'Viens stp ...', src: require('./../sounds/viens-stp-chuhcotement.mp3'), play: false, audio: undefined },
     { name: 'Viens x2', src: require('./../sounds/viens-x2.mp3'), play: false, audio: undefined },
     { name: 'Gatien', src: require('./../sounds/gatien-mistique.mp3'), play: false, audio: undefined },
-    { name: 'Gatien ?', src: require('./../sounds/gatien-mistique-faché.mp3'), play: false, audio: undefined },
+    { name: 'Gatien ?', src: require('./../sounds/gatien-mistique-fache.mp3'), play: false, audio: undefined },
   ];
   public loaded: number = 0;
-  
+
   public mounted() {
-    this.sounds.forEach(sound => {
+    this.sounds.forEach((sound) => {
       // @ts-ignore
-      let audio = new Audio(sound.src);
+      const audio = new Audio(sound.src);
       audio.addEventListener('canplaythrough', this.loadedAudio, false);
       sound.audio = audio;
     });
