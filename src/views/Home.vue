@@ -28,139 +28,145 @@ import Loading from '@/components/Loading.vue'; // @ is an alias to /src
 
 @Component
 export default class Home extends Vue {
-  public sounds: Array<{ name: string, src: NodeRequire, play: boolean, audio: HTMLAudioElement | undefined, loading: boolean }> = [
-    { 
+  public sounds: Array<{
+      name: string,
+      src: NodeRequire,
+      play: boolean,
+      audio: HTMLAudioElement | undefined,
+      loading: boolean,
+    }> = [
+    {
       name: 'Ok',
       src: require('./../sounds/ok1.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
-    { 
+    {
       name: 'Ok (expiration)',
       src: require('./../sounds/ok2.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Homme intégrallement nue',
       src: require('./../sounds/homme-integralement-nue.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Gros viens enculé',
       src: require('./../sounds/gros-viens-encule.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Le sang de tes morts, viens',
       src: require('./../sounds/sang-de-tes-mort-viens.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Enculeur de mouche',
       src: require('./../sounds/enculeur-de-mouche.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Viens',
       src: require('./../sounds/viens.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Hé Ho',
       src: require('./../sounds/he-ho.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Hé ramenne toi',
       src: require('./../sounds/he-ramenne-toi.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Plus vite que ça',
       src: require('./../sounds/plus-vite-que-ca.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Bouge ton cul',
       src: require('./../sounds/bouge-ton-cul.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'On a pas toute la nuit',
       src: require('./../sounds/on-a-pas-toute-la-nuit.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Allé',
       src: require('./../sounds/alle.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Vieeeeennnns',
       src: require('./../sounds/viens-insistant.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Viens !',
       src: require('./../sounds/viens-direct.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Viens stp ...',
       src: require('./../sounds/viens-stp-chuhcotement.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Viens x2',
       src: require('./../sounds/viens-x2.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Gatien',
       src: require('./../sounds/gatien-mistique.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
     {
       name: 'Gatien ?',
       src: require('./../sounds/gatien-mistique-fache.mp3'),
       play: false,
       audio: undefined,
-      loading: true
+      loading: true,
     },
   ];
 
@@ -173,8 +179,7 @@ export default class Home extends Vue {
     });
   }
 
-  public loadedAudio(index:  number) {
-    console.log(this.sounds[index].name);
+  public loadedAudio(index: number) {
     this.sounds[index].loading = false;
   }
 
