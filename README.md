@@ -1,5 +1,7 @@
 # kadir-box
 
+![screen](./website.png)
+
 ## Project setup
 ```
 yarn install
